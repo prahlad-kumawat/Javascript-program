@@ -1,0 +1,53 @@
+1.Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the difference.
+
+2.Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+
+3.Write a JavaScript program to check from one given integers, print number is possitive or Negetive.
+
+4.Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+
+5. Write a JavaScript program to remove a character at the specified position of a given string and return the new string.(22)   
+
+6.Write a JavaScript program to create a new string from a given string changing the position of first and last characters. (23) // Rahul  ---> lahuR
+
+7.Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.(24)  Rahul --> RRahulR
+
+8.Write a JavaScript program to check whether a given positive number is a multiple of 3 or a multiple of 7.(25)   
+
+9.Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more. (26)    Rahul ---> hulRahulhul
+
+10.Write a JavaScript program to check whether a string starts with 'Java' and false otherwise.(27)
+
+
+//---------  11/11/2022   ------------//
+
+30. Write a JavaScript program to check whether a string "Script" presents at 5th (index  4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one. 
+
+31. Write a JavaScript program to find the largest of three given integers. 
+
+
+32. Write a JavaScript program to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+
+36. Write a JavaScript program to check whether the last digit of the three given positive integers is same.  
+
+37. Write a JavaScript program to create new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.
+
+11/16/2022         
+        
+41. Write a JavaScript program to check three given numbers, if the three numbers are same return 30 otherwise return 20 and if two numbers are same return 40.
+48. Write a JavaScript program to reverse a given string.
+51. Write a JavaScript program to convert a given number to hours and minutes. 
+52. Write a JavaScript program to convert the letters of a given string in alphabetical order.
+53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string. 
+54. Write a JavaScript program to count the number of vowels in a given string. 
+55. Write a JavaScript program to check whether a given string contains equal number of p's and t's.
+
+11/18/2022
+58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string. The length of the given string must be 3 and above.
+79. Write a JavaScript program to test whether a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.
+80. Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1.
+82. Write a JavaScript to add two positive integers without carry. 
+83. Write a JavaScript to find the longest string from a given array of strings.
+84. Write a JavaScript to replace each character of a given string by the next one in the English alphabet.  Go to the editor
+Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+85. Write a JavaScript code to divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.  

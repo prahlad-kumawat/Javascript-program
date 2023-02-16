@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+
+    }
+
+    label {
+        color: rgb(77, 8, 8);
+        font-weight: 800;
+        font-size: 26px;
+    }
+
+    input {
+        width: 500px;
+        height: 40px;
+    }
+
+    button {
+        width: 300px;
+        height: 40px;
+    }
+
+    small {
+        color: red;
+    }
+    
+</style>
+
+<body>
+    <h1 style="color:rgb(15, 44, 15) ">JavaScript Validation</h1>
+     <label for="name">Name:</label>
+    <input id="name">
+    <small id="dem"></small>
+     <label for="email">E-mail:</label>
+    <input id="email">
+    <small id="demo"></small>
+     <label for="phone">Mobile no</label>
+    <input id="phone">
+    <small id="phone1"></small>
+     <label for="password">Password:</label>
+    <input id="password" type="password">
+    <small id="password11"></small>
+     <label for="password12">Confirm password:</label>
+    <input id="password12" type="password">
+    <small id="password21"></small></div>
+<br>
+    <button type="button" onclick="myFunction()">Submit</button>
+
+
+    <script>
+        function myFunction() {
+
+            let y = document.getElementById("name").value;
+
+            c = /^[a-zA-Z]{4,20}$/
+            if (y == "") {
+                c = "**Please Enter Your Name"
+            }
+            else if (c.test(y)) {
+                c = "**Correct"
+            } else {
+                c = "**Input only alphabets and using character b/w 4-20"
+            }
+            document.getElementById("dem").innerHTML = c;
+            // -----------------------------------------------------------------------
+            let x = document.getElementById("email").value;
+            let b = /^[a-zA-Z]+[a-zA-Z0-9_.]+[a-zA-Z0-9]+@([a-zA-Z]{5})+[.]+[a-zA-Z]{3}$/
+
+            if (x == "") {
+                b = "**Please Enter Your Email"
+            }
+            else if (b.test(x)) {
+                b = "**Correct"
+            } else {
+                b = "**Please Enter Proper Format"
+            }
+            document.getElementById("demo").innerHTML = b;
+
+            // -----------------------------------------------------------------------
+            let z = document.getElementById("phone").value;
+            let text;
+            let d = /^[0-9]{10}$/
+            if (z == "") {
+                d = "**Please Enter Your Mobile number"
+            }
+            else if (d.test(z)) {
+                d = "**Correct"
+            } else {
+                d = "**Please Enter 10 digit number"
+            }
+            document.getElementById("phone1").innerHTML = d;
+            // -----------------------------------------------------------------------
+            let a = document.getElementById("password").value;
+
+
+            let e = /^[0-9a-zA-Z]{6,16}$/
+            if (a == "") {
+                e = "**Please Enter Your Password"
+            }
+            else if (e.test(a)) {
+                e = "**Correct"
+            }
+            else {
+                e = "**Password is use only alphabets and numbers and password length b/w 6 to 16"
+            }
+
+            console.log(e);
+            document.getElementById("password11").innerHTML = e;
+            // -----------------------------------------------------------------------
+            let f = document.getElementById("password12").value;
+            if (f == "") {
+                t = "**Please Confirm Your Password"
+            }
+            else if (a == f) {
+                t = "**Correct"
+            }
+            else {
+                t = "**Password not matched"
+            }
+            document.getElementById("password21").innerHTML = t;
+            // -----------------------------------------------------------------------
+        }
+
+
+    </script>
+</body>
+
+</html>
