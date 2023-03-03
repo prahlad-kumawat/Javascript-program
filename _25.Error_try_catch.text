@@ -1,0 +1,101 @@
+There are three types of errors in programming: (a)Syntax Errors, (b) Runtime Errors, and (c) Logical Errors.
+
+(a)Syntax Errors - when we mistake when writing a code its called syntex error.
+
+(b)Runtime Errors -
+    Runtime errors, also called exceptions, occur during execution (after compilation/interpretation).
+
+(c)Logical Errors - 
+        Logic errors can be the most difficult type of errors to track down. These errors are not the result of a syntax or runtime error. Instead, they occur when you make a mistake in the logic that drives your script and you do not get the result you expected.   
+ >we right a try catch block to handle a error
+   
+
+1.JavaScript try and catch -
+    The try statement allows you to define a block of code to be tested for errors while it is being executed.
+    The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+    The JavaScript statements try and catch come in pairs:
+       Ex- try {
+            alrt("i am right");
+            }
+            catch(err) {
+            console.log(err.message);  // output = alrt is not define
+            }    
+
+
+2.The throw Statement
+    The throw statement allows you to create a custom error.
+    Technically you can throw an exception (throw an error).
+
+    >Input Validation Example
+        This example examines input. If the value is wrong, an exception (err) is thrown.
+        The exception (err) is caught by the catch statement and a custom error message is displayed:
+
+      Ex - 
+      let num = 25
+      try{
+            if(num == " ") throw "Enter some value";
+            if(num >= 24) throw "Enter largest value";
+            if(num <= 26) throw "Enter smallest value";
+            if(num == 25);
+         }
+         catch(err){
+            console.log(err);
+         }
+
+3.The finally Statement - 
+    The finally statement lets you execute code, after try and catch, regardless(anyhow) of the result:        
+  ex -
+        let x = document.getElementById("demo").value;
+        try {
+            if(x == "") throw "is empty";
+            x = Number(x);
+            if(x > 10) throw "is too high";
+            if(x < 5) throw "is too low";
+        }
+        catch(err) {
+            message.innerHTML = "Error: " + err + ".";  // Printing error 
+        }
+        finally {
+            document.getElementById("demo").value = ""; // after entering value 
+                                                    this finally block blank input field
+        }
+        
+
+
+4.The Error Object -
+JavaScript has a built in error object that provides error information when an error occurs.
+
+The error object provides two useful properties: name and message.
+
+>Error Object  Properties
+    Property	Description
+    name	    Sets or returns an error name
+    message	    Sets or returns an error message (a string)
+
+>Error Name Values -
+Six different values can be returned by the error name property:
+
+Error Name	Description
+
+RangeError	  -  A number "out of range" has occurred
+ReferenceError-	An illegal reference has occurred
+SyntaxError	  -  A syntax error has occurred
+TypeError	  -  A type error has occurred
+URIError	  -  An error in encodeURI() has occurred
+
+The six different values are described below.
+
+ex- 
+
+1. URI (Uniform Resource Identifier) Error
+A URIError is thrown if you use illegal characters in a URI function:
+
+Example
+    try {
+    decodeURI("%%%");   // You cannot URI decode percent signs
+    }
+    catch(err) {
+    document.getElementById("demo").innerHTML = err.name;
+    }
+
+

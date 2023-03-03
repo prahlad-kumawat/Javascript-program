@@ -1,0 +1,36 @@
+Different Kinds of Loops
+ JavaScript supports different kinds of loops:
+
+    1.for - loops through a block of code a number of times
+    2.for/in - loops through the properties of an object
+    3.for/of - loops through the values of an iterable object
+    4.while - loops through a block of code while a specified condition is true
+    5.do/while - also loops through a block of code while a specified condition is true
+
+
+1. for - 
+       -Expression 1
+            Normally you will use expression 1 to initialize the variable used in the loop (let i = 0).
+            This is not always the case. JavaScript doesn't care. Expression 1 is optional.
+            You can initiate many values in expression 1 (separated by comma):
+
+        Example - 
+            for (let i = 0, len = cars.length, text = ""; i < len; i++) {
+            text += cars[i] + "<br>";
+            } 
+
+   - And you can omit expression 1 (like when your values are set before the loop starts):
+
+        Example - 
+            let i = 2;
+            let len = cars.length;
+            let text = "";
+            for (; i < len; i++) {
+            text += cars[i] + "<br>";
+            }        
+       -Expression 2
+           1. Often expression 2 is used to evaluate the condition of the initial variable.
+           2.This is not always the case. JavaScript doesn't care. Expression 2 is also optional.
+           3.If expression 2 returns true, the loop will start over again. If it returns false, the loop will end.
+           4.If you omit expression 2, you must provide a break inside the loop. Otherwise the loop will never end. This will crash your browser. Read about breaks in a later chapter of this tutorial.
+                            

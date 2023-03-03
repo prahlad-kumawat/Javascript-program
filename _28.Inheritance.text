@@ -1,0 +1,45 @@
+Class Inheritance
+    To create a class inheritance, use the extends keyword.
+
+    A class created with a class inheritance inherits all the methods from another class:
+
+    Example
+        Create a class named "Model" which will inherit the methods from the "Car" class:
+
+        class car {
+            constructor(price, contry) {
+                this.myPrice = price;
+                this.myContry = contry;
+            }
+            biodata() {
+                return `Car price is ${this.myPrice} and origin in ${this.myContry}`;
+            }
+
+        }
+        let Honda = new car(23_00_000, "india");
+        let mastung = new car(19_00_000, "America");
+        // Honda.biodata();
+
+
+        class myCar extends car{
+            constructor(Price , contry){
+                super(Price , contry);
+                this.myContry = contry;
+            }
+            // When you can access the contry value you firstly store this value and use it (this.myContry = contry)
+        
+            details(det){
+                console.log(`My car length is : ${det} and ${super.biodata()} ${this.myContry} `);
+            }
+
+            // We also use to call the method this.biodata() or super.biodata()
+
+        }
+       // when you create a child class using a parent class you should pass values in child class
+        let ourCar = new myCar(25 , "gg");
+
+        ourCar.details("12ft");
+
+
+
+        ****set and get are remains

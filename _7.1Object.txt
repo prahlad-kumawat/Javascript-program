@@ -1,0 +1,57 @@
+JavaScript Objects
+    You have already learned that JavaScript variables are containers for data values.
+    This code assigns a simple value (Fiat) to a variable named car:
+
+         let car = "Fiat";
+    Objects are variables too. But objects can contain many values.
+
+    This code assigns many values (Fiat, 500, white) to a variable named car:
+            const car = {type:"Fiat", model:"500", color:"white"};
+    The values are written as name:value pairs (name and value separated by a colon).
+
+>Accessing Object Properties
+        You can access object properties in two ways:
+
+         ex- objectName.propertyName
+            or
+            objectName["propertyName"]
+
+    note - 
+         1.The name:values pairs in JavaScript objects are called properties:
+
+
+>Object Methods
+    Objects can also have methods.
+    Methods are actions that can be performed on objects.
+    Methods are stored in properties as function definitions.
+
+    ex- Example
+            const person = {
+                firstName: "John",
+                lastName : "Doe",
+                id       : 5566,
+                fullName : function() {
+                        return this.firstName + " " + this.lastName;
+                    }
+            };
+
+
+>In the example above, this refers to the person object.
+    I.E. this.firstName means the firstName property of this.
+    I.E. this.firstName means the firstName property of person.
+
+    What is this?
+        1.In JavaScript, the this keyword refers to an object.
+        2.Which object depends on how this is being invoked (used or called).
+        3.The this keyword refers to different objects depending on how it is used:
+        4.In an object method, this refers to the object.
+        5.When we use this outside the Object and array , this refers to the global object.
+        6.In a function, this refers to the global object.   
+
+
+>If you access a method without the () parentheses, it will return the function definition:
+    Example
+        name = person.fullName;                 
+
+            
+

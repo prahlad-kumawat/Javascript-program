@@ -1,0 +1,76 @@
+Types of JavaScript Operators
+    >There are different types of JavaScript operators:
+
+        1.Aritmetic Operators
+        2.Assignment Operators
+        3.Comparison Operators
+        4.Logical Operators
+        5. Bitwise Operators
+        6.Conditional Operators
+
+    1.Arithmetic Operators
+        Arithmetic operators are used to perform arithmetic on numbers:
+
+        Operator	Description
+        +	        Addition
+        -	        Subtraction
+        *	        Multiplication
+        **	        Exponentiation (ES2016)
+        /	        Division
+        %	        Modulus (Division Remainder)
+        ++	        Increment
+        --	        Decrement   
+
+    2.Assignment operators-
+            Assignment operators assign values to JavaScript variables.
+
+                Operator	Example	            Same As
+                  =	        x = y	             x = y
+                  +=	    x += y	             x = x + y  ....
+
+         > The += assignment operator can also be used to add (concatenate) strings:
+                    Example
+                    let text1 = "What a very ";
+                    text1 += "nice day"; 
+    
+
+      3.Comparison Operators
+                    Operator	Description
+                       ==	       equal to
+                       ===	       equal value and equal type
+                       !=	       not equal
+                       !==	       not equal value          or not equal type
+                       >	       greater than
+                       <	       less than
+                       >=	       greater than or equal to
+                       <=	       less than or equal to
+                       ?	       ternary operator   
+
+      4.Logical Operators
+                        Operator	Description
+                             &&	    logical and
+                             ||	    logical or
+                             !	    logical NOT  
+
+
+      5. Bitwise Operators
+                Bit operators work on 32 bits numbers.
+
+      6. Conditional Operator - 
+          1.if..eles
+          2. switch
+          3. ternary -
+                      condition ? expression1 : expression2;
+        
+        The ternary operator evaluates the test condition.
+            1.If the condition is true, expression1 is executed.
+            2.If the condition is false, expression2 is executed.
+
+
+            
+
+            
+
+
+
+            

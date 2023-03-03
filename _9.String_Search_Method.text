@@ -1,0 +1,89 @@
+
+ ------3.JavaScript Search Methods
+              String indexOf()
+              String lastIndexOf()
+              String startsWith()
+              String endsWith()
+
+       1.indexOf()
+            The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+            Example - 
+                let str = "Please locate where 'locate' occurs!";
+                str.indexOf("locate");  
+
+                output - 7          // js countes position from zero
+
+       2.lastIndexOf()
+              The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+              Example
+                let str = "Please locate where 'locate' occurs!";
+                str.lastIndexOf("locate");
+                output - 21 ;
+
+      note -
+      1.  Both indexOf(), and lastIndexOf() return -1 if the text is not found
+      2.   Both methods accept a second parameter as the starting position for the search:
+            Example
+            let str = "Please locate where 'locate' occurs!";
+            str.indexOf("locate", 15);  // search starts after 15th 
+                                        index(index counting at begning)
+                                        // and returns first occurance
+
+      3.The lastIndexOf() methods searches inside 15 index (index counting at begning)
+                      return the result of the last maching.
+        ex - 
+          let str = "Please locate where 'locate' occurs!";
+          str.lastIndexOf("locate", 15);    
+
+      4.JavaScript String search()
+            The search() method searches a string for a specified value and returns the position of the match:
+
+            Example
+                let str = "Please locate where 'locate' occurs!";
+                     str.search("locate");
+
+                Did You Notice?
+                      The two methods, indexOf() and search(), are equal?
+                      They accept the same arguments (parameters), and return the same value?
+
+                      The two methods are NOT equal. These are the differences:
+                          1.The search() method cannot take a second start position argument. 
+                          -(its takes regular expressions but dones't work)
+                          2.The indexOf() method cannot take powerful search values
+                          -(regular expressions ex - /g /i).
+                          
+      5.match()
+          The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+          Example 1
+          Search a string for "ain":
+
+          let text = "The rain in SPAIN stays mainly in the plain";
+                text.match(/ain/g);
+                text.match(/ain/gi);
+
+          Note -
+              1.If a regular expression does not include the g modifier (to perform a global search), the match() method will return only the first match in the string.                    
+              2. we use regural expression /g and /i etc. 
+
+
+     6. includes() - 
+            The includes() method returns true if a string contains a specified value.
+            Example
+            let text = "Hello world, welcome to the universe.";
+            text.includes("world");   
+
+
+            note - 1. Returns:	Returns true if the string contains the value, otherwise false
+                   2. we also enter starting number to search
+                           ex - text.includes("world" , 10);   
+
+      7.startsWith()-
+                The startsWith() method returns true if a string begins with a specified value, otherwise false:
+
+                note - The startsWith() and endsWith()  method is case sensitive.
+
+      8. endsWith()- 
+                The endsWith() method returns true if a string end with a specified value, otherwise 
+                false:
+
+                

@@ -1,0 +1,170 @@
+JavaScript Array forEach() -
+    1.forEach() - The forEach() method calls a function (a callback function) once for each array element.
+
+    Example
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+        txt += value + "<br>";
+        }
+
+    Note that the function takes 3 arguments:
+        1.The item value
+        2.The item index
+        3.The array itself
+
+    2.JavaScript Array map()-
+    NOTE-
+        1.The map() method creates a new array by performing a function on each array element.
+        2.The map() method does not execute the function for array elements without values.
+        3.The map() method does not change the original array.
+
+        Example
+            const numbers1 = [45, 4, 9, 16, 25];
+            const numbers2 = numbers1.map(myFunction);
+
+            function myFunction(value, index, array) {
+            return value * 2;
+            } 
+
+    3.filter()
+        The filter() method creates a new array with array elements that pass a test.
+        This example creates a new array from elements with a value larger than 18:
+
+        Example
+            const numbers = [45, 4, 9, 16, 25];
+            const over18 = numbers.filter(myFunction);
+
+            function myFunction(value, index, array) {
+            return value > 18;
+            }
+
+    4. reduce() -
+            The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+            The reduce() method works from left-to-right in the array. See also reduceRight().
+            The reduce() method does not reduce the original array.
+            This example finds the sum of all numbers in an array:
+
+            Example
+                const numbers = [45, 4, 9, 16, 25];
+                let sum = numbers.reduce(myFunction);
+
+                function myFunction(total, value, index, array) {
+                return total + value;
+                }
+                Note that the function takes 4 arguments:
+
+                1.The total (the initial value / previously returned value)
+                2.The item value
+                3.The item index
+                4.The array itself    
+
+        note - The reduce() method can accept an initial value:
+            Example - 
+                const numbers = [45, 4, 9, 16, 25];
+                let sum = numbers.reduce(myFunction, 100);
+
+                function myFunction(total, value) {
+                return total + value;
+                }   
+
+    5. reduceRight() - 
+            The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+            The reduceRight() works from right-to-left in the array.     
+
+    6.Array every()
+        The every() method checks if all array values check and right acording to the consition every method returns true otherwise false.
+
+        This example checks if all array values are larger than 18:
+
+        Example -
+            const numbers = [45, 4, 9, 16, 25];
+            let allOver18 = numbers.every(myFunction);
+
+            function myFunction(value, index, array) {
+            return value > 18;
+            }   
+
+            output - false ;
+
+    7.Array some() -
+        The some() method checks if some array values pass a test returns true.
+        This example checks if some array values are larger than 18:                    
+    8.indexOf() -
+        The indexOf() method searches an array for an element value and returns its position.
+        Note: The first item has position 0, the second item has position 1, and so on.
+
+        array.indexOf(item, start);
+
+
+    9.lastIndexOf() -
+        Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+        Example -
+            Search an array for the item "Apple":
+
+            const fruits = ["Apple", "Orange", "Apple", "Mango"];
+            let position = fruits.lastIndexOf("Apple") + 1;
+            Syntax -
+                 array.lastIndexOf(item, start);
+
+    10.find()
+        The find() method returns the value of the first array element that passes a test function.
+        This example finds (returns the value of) the first element that is larger than 18:
+
+        Example
+            const numbers = [4, 9, 16, 25, 29];
+            let first = numbers.find(myFunction);
++-9------*66666+
+
+
+
+            function myFunction(value, index, array) {
+            return value > 18;
+            }         
+
+    11.findIndex()
+        The findIndex() method returns the index of the first array element that passes a test function.
+
+        This example finds the index of the first element that is larger than 18:
+
+
+    12.Array.from() -
+        The Array.from() method returns an Array object from any object with a length property or any iterable object.
+
+        Example
+            Create an Array from a String:
+            Array.from("ABCDEFG");   
+
+    13.Array Keys()
+        The Array.keys() method returns an Array Iterator object with the keys of an array.
+
+        Example
+            Create an Array Iterator object, containing the keys of the array:
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            const keys = fruits.keys();   
+
+    14. Array entries()
+        Example
+            Create an Array Iterator, and then iterate over the key/value pairs:
+
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            const f = fruits.entries();
+                                
+         note - The entries() method returns an Array Iterator object with key/value pairs:
+                [0, "Banana"]
+                [1, "Orange"]
+                [2, "Apple"]
+                [3, "Mango"]     
+
+
+    15. Array includes() -
+            ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf). 
+
+            ex- 
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    fruits.includes("Mango"); // is true
+
+        Note- Array.includes() allows to check for NaN values. Unlike Array.indexOf().                                         

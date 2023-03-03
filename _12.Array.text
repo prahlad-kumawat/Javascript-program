@@ -1,0 +1,100 @@
+Arrays
+    An array is a special variable, which can hold more than one value:
+    const cars = ["Saab", "Volvo", "BMW"];
+
+>Creating an Array
+        Using an array literal is the easiest way to create a JavaScript Array.
+        Syntax:
+            const array_name = [item1, item2, ...];      
+            It is a common practice to declare arrays with the const keyword.
+
+>You can also create an array, and then provide the elements:
+        Example
+        const cars = [];
+        cars[0]= "Saab";
+        cars[1]= "Volvo";
+        cars[2]= "BMW";  
+
+>Using the JavaScript Keyword new
+    The following example also creates an Array, and assigns values to it:
+        Example
+        const cars = new Array("Saab", "Volvo", "BMW");
+
+    Note -    
+      1.The two examples above do exactly the same.
+      2.There is no need to use new Array().
+          For simplicity, readability and execution speed, use the array literal method.
+
+> Array Elements
+    You access an array element by referring to the index number:
+    const cars = ["Saab", "Volvo", "BMW"];
+    let car = cars[0]; 
+
+> Changing an Array Element
+    This statement changes the value of the first element in cars:
+    cars[0] = "Opel";    
+
+>Access the Full Array
+        With JavaScript, the full array can be accessed by referring to the array name:
+        ex - console.log(cars);
+
+> Arrays are Objects
+        Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+        But, JavaScript arrays are best described as arrays.
+        Arrays use numbers to access its "elements". In this example, person[0] returns John:
+        Array:
+             const person = ["John", "Doe", 46]; 
+
+           Note - Objects use names to access its "members". In this example, person.firstName returns John: 
+
+ >Array Elements Can Be Objects
+        JavaScript variables can be objects. Arrays are special kinds of objects.
+        Because of this, you can have variables of different types in the same Array.
+
+        You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+        Ex -
+            myArray[0] = Date.now;
+            myArray[1] = myFunction;
+            myArray[2] = myCars;
+        
+
+    Note: Array indexes start with 0. 
+
+ > The length Property
+        The length property of an array returns the length of an array (the number of array elements).     
+
+        Note -The length property is always one more than the highest array index.
+
+       
+
+
+  Note - 
+               1.The Difference Between Arrays and Objects
+                1.1 In JavaScript, arrays use numbered indexes.  
+                1.2 In JavaScript, objects use named indexes.
+
+               2.Arrays are a special kind of objects, with numbered indexes.
+
+               3.When to Use Arrays. When to use Objects.
+                    You should use objects when you want to access the element using names.
+                    You should use arrays when you want access the element using numbers.
+
+             
+
+
+> How to Recognize an Array - 
+            A common question is: 
+                How do I know if a variable is an array?
+                
+                The problem is that the JavaScript operator typeof returns "object":
+                const fruits = ["Banana", "Orange", "Apple"];
+                let type = typeof fruits;
+                The typeof operator returns object because a JavaScript array is an object. 
+
+>Solution:
+        To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():
+        Array.isArray(fruits);
+
+
+    WARNING !
+         Adding elements with high indexes can create undefined "holes" in an array:                                 

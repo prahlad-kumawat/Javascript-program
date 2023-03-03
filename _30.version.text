@@ -1,0 +1,84 @@
+2009 - 
+
+Trailing Commas
+    ES5 allows trailing commas in object and array definitions:
+
+JSON Objects:
+    // Allowed:
+    var person = '{"firstName":"John", "lastName":"Doe", "age":46}'
+    JSON.parse(person)
+
+    // Not allowed:
+    var person = '{"firstName":"John", "lastName":"Doe", "age":46,}'
+    JSON.parse(person).
+
+
+2015 -
+
+Spread operatore -
+
+
+2019 - 
+
+>JavaScript Array flat() -
+        The flat() method creates a new array and add all elements in this new array add first elements zero index.
+
+    Example
+    const myArr = [[1,2],[3,4],[5,6]];
+    const newArr = myArr.flat();
+
+>JavaScript Array flatMap() -
+       The flatMap() method first maps all elements of an Array and accepts a function , inside this function put the value so we access the value we required to put the variable see below example -
+
+    Example
+    const myArr = [1, 2, 3, 4, 5,6];
+    const newArr = myArr.flatMap((x) => x * 2);    
+
+2020 - 
+
+>BigInt -
+    JavaScript BigInt variables are used to store big integer values that are too big to be represented by a a normal JavaScript Number.
+
+    JavaScript integers are only accurate up to 15 digits.
+
+    Integer Example
+    let x = 123456789012345;
+    let y = 1234567890123456; // too big
+
+    BigInt Example
+    let x = 9999999999999999;
+    let y = 9999999999999999n;
+    ||or||
+    let y = BigInt(1234567890123456789012345)
+
+    **Type of Bigint
+    typeof y ; //bigint:
+
+
+>The Nullish Coalescing Operator (??) -
+    The ?? operator returns the second argument if first argument is null or undefined. Otherwise it returns the first.
+
+    Example
+    let name = null;
+    let text = "missing";
+    let result = name ?? text;    
+
+>The Optional Chaining Operator (?.) -
+    The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).   
+
+
+2021 - 
+
+> JavaScript Numeric Separator (_)
+    ES2021 intoduced the numeric separator (_) to make numbers more readable:     
+
+    Example
+    const num1 = 1_000_000_000;
+    const num2 = 1000000000;
+    (num1 === num2);
+
+Note - Note
+    The numeric separator is not allowed at the beginning or at the end of a number.
+    In JavaScript only variables can start with _.
+
+

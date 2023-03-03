@@ -1,0 +1,71 @@
+4 Ways to Declare a JavaScript Variable:
+   1. Using var
+   2. Using let
+   3. Using const
+   4. Using nothing
+
+>What are Variables?
+   Variables is used to store data. 
+
+>Just Like Algebra
+    Just like in algebra, variables hold values:
+   ex -
+        let x = 5;
+        let y = 6;
+
+>The var keyword is used in all JavaScript code from 1995 to 2015.
+>The let and const keywords were added to JavaScript in 2015.
+
+>When to Use JavaScript const?
+    If you want a constant value always declare variables with const.
+
+
+
+>JavaScript Identifiers
+    All JavaScript variables must be identified with unique names.
+    These unique names are called identifiers.
+
+    Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+    The general rules for constructing names for variables (unique identifiers) are:
+
+    1.Names can contain letters, digits, underscores, and dollar signs.
+    2.Names must begin with a letter ,underscores and dollar signs.
+    3.Names can also begin with $ and _.
+    4.Names are case sensitive (y and Y are different variables).
+    5.Reserved words (like JavaScript keywords) cannot be used as names.
+    
+    Note -
+         JavaScript identifiers are case-sensitive.   
+
+>The Assignment Operator -
+    In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+
+
+>One Statement, Many Variables -
+    You can declare many variables in one statement.
+
+    Start the statement with let and separate the variables by comma:
+        Example -
+         let person = "John Doe", carName = "Volvo", price = 200;
+
+     Note - 1.A variable declared without a value will have the value undefined. 
+
+
+>Re-Declaring JavaScript Variables -
+
+    If you re-declare a JavaScript variable declared with var, it will not lose its value.
+
+    The variable carName will still have the value "Volvo" after the execution of these statements:
+
+    Example
+    var carName = "Volvo";
+    var carName; 
+
+   Note -
+        You cannot re-declare a variable declared with let or const.
+
+        This will not work:
+
+        let carName = "Volvo";
+        let carName;                      

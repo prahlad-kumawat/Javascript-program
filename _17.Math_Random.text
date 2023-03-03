@@ -1,0 +1,116 @@
+Math Object
+    The JavaScript Math object allows you to perform mathematical tasks on numbers.
+        Example
+             Math.PI;
+    
+  
+    The Math Object
+        1.Unlike other objects, the Math object has no constructor.
+        2.The Math object is static.
+        3.All methods and properties can be used without creating a Math object first    
+
+    Math Methods
+        The syntax for Math any methods is : Math.method(number)   
+
+        1.Math.round()
+            Math.round(x) returns the nearest integer:
+            Examples
+                 Math.round(4.6);   //5      
+                 Math.round(4.5);   //5      
+                 Math.round(4.4);   //4
+
+        2.Math.ceil()
+            Math.ceil(x) returns the value of x rounded up to its nearest integer:
+            Example
+             Math.ceil(4.9); // 5              
+             Math.ceil(4.4); // 5  
+
+        3.Math.floor()
+                Math.floor(x) returns the value of x rounded down to its nearest integer:
+                Example
+                    Math.floor(4.6); // 4
+                    Math.floor(4.4);  // 4  
+
+        4. Math.trunc()
+            Math.trunc(x) returns the integer part of x:
+            Example
+                Math.trunc(4.6);  // 4
+                Math.trunc(4.4);  // 4    
+
+        // what is diff bw Math.trunc and Math.floor
+
+             1. // when we enter negative value he always returns first digit
+                Math.trunc(-4.4);  // -4   
+             2. // when we enter negative value in floor returns smallest value
+                Math.floor(-4.4)   // -5
+
+        5. Math.sign() - returns if x is negative, null or positive:
+
+           * when we enter negative values sign() returns -1
+           * when we enter Positive values sign() returns +1
+           * when we enter zero values sign() returns      0
+
+        6. Math.pow()
+            Math.pow(x, y) returns the value of x to the power of y:
+            Example
+                Math.pow(8, 2); //64
+
+        7.Math.sqrt()
+            Math.sqrt(x) returns the square root of x:
+            Example
+                Math.sqrt(64);          
+            
+        8.Math.abs()
+            Math.abs(x) returns the absolute (positive) value of x:
+            Example
+                 Math.abs(-4.7);  // 4.7   //always returns positive values
+
+        9.Math.min() and Math.max()
+            Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments:
+            Example
+                 Math.min(0, 150, 30, 20, -8, -200);         
+
+        10. Math.random()
+             1.  Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive):
+
+                Example
+                    // Returns a random number:
+                    Math.random();
+                    Math.random() always returns a number lower than 1.
+
+             2. JavaScript Random Integers
+                    Math.random() used with Math.floor() can be used to return random integers.
+                    There is no such thing as JavaScript integers.
+                    We are talking about numbers with no decimals here.
+
+                    Example
+                    // Returns a random integer from 0 to 9:
+                    Math.floor(Math.random() * 10);
+
+             3. // Returns a random integer from 0 to 10:
+                    Math.floor(Math.random() * 11);      
+
+
+            4. A Proper Random Function
+                As you can see from the examples above, it might be a good idea to create a proper random function to use for all random integer purposes.
+
+                This JavaScript function always returns a random number between min (included) and max (excluded):
+
+                Example
+                    function getRndInteger(min, max) {
+                    return Math.floor(Math.random() * (max - min) ) + min;
+
+              
+             note -1. when we add 1 in a min we include both values  - (max - min+1)
+                   2.   //1-10  = (max - min);
+                        //10-20  = (max - min) + min;
+                        //20 - 30 = (max - min) + max;  // min and max value gap is 
+                                             //10 so random number is printed only 10 number above
+
+                    3.   we are print a random number and creating 
+                             a rang using min and max value
+                        // 0.56482 * 10+10
+                        // 0.56482 * 20
+                        // 11.2964
+                        
+read -- Math.sin() , Math.cos() , Math.log() , Math.log2() , Math.E .

@@ -1,0 +1,227 @@
+**JSON - Introduction
+    JSON stands for JavaScript Object Notation
+    JSON is a text format for storing and transporting data
+    JSON is "self-describing" and easy to understand
+
+ >What is JSON?
+    JSON stands for JavaScript Object Notation
+    JSON is a lightweight data-interchange format
+    JSON is plain text written in JavaScript object notation
+    JSON is used to send data between computers
+    JSON is language independent(means works with all languages)
+
+  Note - 1.The JSON syntax is derived from JavaScript object notation, but the JSON format is text only.
+         2. JSON name full form keyword "JavaScript" means its similar to javascript object and array. 
+JSON is not Connected specifice way to javaScript.
+
+
+ >Why Use JSON?
+    The JSON format is syntactically similar to the code for creating JavaScript objects.
+ Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
+
+    Since the format is text only, JSON data can easily be sent between computers, 
+    and used by any programming language. 
+
+  Note -1.You can receive pure text from a server and use it as a JavaScript object.
+        2.You can send a JavaScript object to a server in pure text format.
+        3.You can work with data as JavaScript objects, with no complicated parsing and translations.
+
+
+** JSON Syntax
+        The JSON syntax is a subset of the JavaScript syntax.
+        JSON Syntax Rules
+        JSON syntax is derived from JavaScript object notation syntax:
+
+        Data is in name/value pairs
+        Data is separated by commas
+        Curly braces hold objects
+        Square brackets hold arrays
+
+
+    >JSON Values -
+        In JSON, values must be one of the following data types:
+        1.a string
+        2.a number
+        3.an object
+        4.an array
+        5.a boolean
+        6.null
+
+        JSON values is not included so we dont parse this value *derectly* using JSON:
+        1.a function
+        2.a date
+        3.undefined
+
+
+**JSON vs XML - 
+            Both JSON and XML can be used to receive data from a web server.
+
+      XML Example - 
+        <employees>
+            <employee>
+                <firstName>John</firstName> <lastName>Doe</lastName>
+            </employee>      
+        </employees>
+
+    >JSON is Like XML Because
+        1.Both JSON and XML are "self describing" (human readable)
+        2.Both JSON and XML are hierarchical (values within values)
+        3.Both JSON and XML can be parsed and used by lots of programming languages
+        4.Both JSON and XML can be fetched with an XMLHttpRequest 
+
+    >JSON is Unlike XML Because
+        JSON doesn't use end tag
+        JSON is shorter
+        JSON is quicker to read and write
+        JSON can use arrays   
+
+     Note - 1.XML is much more difficult to parse than JSON.
+            2.JSON is parsed into a ready-to-use JavaScript object.
+            3.For AJAX applications, JSON is faster and easier than XML.
+            
+               
+****JSON.parse() - 
+
+        When receiving data from a web server, the data is always a string.
+
+> Parsing JSON
+    Imagine we received this text from a web server:
+
+    '{"name":"John", "age":30, "city":"New York"}'
+    Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
+
+    const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+    Make sure the text is in JSON format, or else you will get a syntax error.
+    
+ > We also create a menuly JSON object and Array - 
+    Example - 
+        const text = '["Ford", "BMW", "Audi", "Fiat"]';
+        const myArr = JSON.parse(text);
+        
+ >  **We can also use Date method but the diff way see the below      
+       ex - 
+            Parse a JSON Date in JavaScript #
+            
+            Use the toJSON() method to get a string representation of the Date object.
+            Pass the JSON string to the Date() constructor.
+            
+     // we can change the date into json
+        const json = new Date().toJSON();  // change date into string
+        output -  console.log(json); // 👉️ "2022-01-23T09:04:45.904Z"
+        
+        const date = new Date(json);  // change string into date reverse
+        output - console.log(date); // 👉️ Sun Jan 23 2022 11:04:45  
+
+    
+    Ex- Date method example
+        const details = '{"name":"rahul" , "age":23 , "date":"1998-12-14"}';
+                 const obj = JSON.parse(details , function(key , value){
+                        if(key == "date"){
+                        return new Date(value);
+                        }
+                        else{
+                        return value;
+                        }
+                });
+
+     see the shorter method using changing date
+     
+           let obj = JSON.parse(details);
+           obj.date = new Date(obj.date);
+           console.log(obj);
+
+
+ >  ****We can also use Function but the diff way see the below - 
+        Ex - 
+        var json = '{ "one": 700, "two": "function(e){alert(e);}" }';
+        var parameters = JSON.parse(json);
+
+        eval('var func = ' + parameters.two);
+
+        func('test'); // alerts "test"
+
+
+     ** Here we use eval method  - this methos is used to remove sigle or double quotes. 
+
+     Note - You should avoid using functions in JSON, the functions will lose their scope, and 
+you would have to use eval() to convert them back into functions.
+
+
+******JSON.stringify() - 
+        A common use of JSON is to exchange data to/from a web server.
+        When sending data to a web server, the data has to be a string.
+        Convert a JavaScript object into a string with JSON.stringify().
+        
+        JavaScript Array - 
+            It is also possible to stringify JavaScript arrays
+
+            Imagine we have this array in JavaScript:
+            const arr = ["John", "Peter", "Sally", "Jane"];
+
+            Use the JavaScript function JSON.stringify() to convert it into a string.
+            const myJSON = JSON.stringify(arr);
+
+           Note - The result will be a string following the JSON notation.
+                    
+   > Storing Data
+        When storing data, the data has to be a certain format, and regardless of where you choose to store it, 
+text is always one of the legal formats.
+        JSON makes it possible to store JavaScript objects as text.
+        
+        Example -
+        Storing data in local storage
+        
+        // Storing data:
+            const myObj = {name: "John", age: 31, city: "New York"};
+            const myJSON = JSON.stringify(myObj);
+            localStorage.setItem("testJSON", myJSON);
+        
+        // Retrieving data:
+            let text = localStorage.getItem("testJSON");
+            let obj = JSON.parse(text);
+            document.getElementById("demo").innerHTML = obj.name;  
+            
+    > Exceptions
+            //Stringify Dates -
+                In JSON, date objects are not allowed. The JSON.stringify() function will convert any dates into strings.
+            
+            Example
+                const obj = {name: "John", today: new Date(), city : "New York"};
+                const myJSON = JSON.stringify(obj);
+                You can convert the string back into a date object at the receiver.
+            
+            //Stringify Functions -
+                 In JSON, functions are not allowed as object values.
+                 The JSON.stringify() function will remove any functions from a JavaScript object, 
+                 both the key and the value:
+            Example-
+                const obj = {name: "John", age: function () {return 30;}, city: "New York"};
+                const myJSON = JSON.stringify(obj);
+
+                Output - '{name: "John", city: "New York"}'
+
+            This can be omitted if you convert your functions into strings before running the JSON.stringify() function.
+            Example - 
+                const obj = {name: "John", age: function () {return 30;}, city: "New York"};
+                obj.age = obj.age.toString();
+                const myJSON = JSON.stringify(obj);  
+                
+               Output - '{name: "John", age: function () {return 30;}, city: "New York"};'
+
+         Note  - If you send functions using JSON, the functions will lose their scope, 
+and the receiver would have to use eval() to convert them back into functions.
+
+      
+    > JSON HTML - read in w3schools
+                   
+                
+
+   
+
+
+
+         
+                
+
+
+

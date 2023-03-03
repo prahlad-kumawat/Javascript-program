@@ -1,0 +1,83 @@
+Promise - The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+Promise Object Properties
+    A JavaScript Promise stages:
+
+    1.Pending
+    2.Fulfilled
+    3.Rejected
+    The Promise object supports two properties: state and result.
+
+    myPromise.state     myPromise.result
+    "pending"	        undefined
+    "fulfilled"	        a result value
+    "rejected"	        an error object  
+
+
+1. First we create a promise using new keyword
+        let prom = new Promise(function (resolve, reject) {}
+
+        // this promise is takes function and function takes two parameter resolve and reject
+        
+   See below  exapmle
+  ex -  // Promise
+
+        let x = 5;
+        let prom = new Promise(function (resolve, reject) {
+
+            if (x == 5) {
+                resolve("Success");
+            }
+            else {
+                reject("Failed");
+            }
+        })
+
+        let promiseFulfill = (result) => {
+            console.log(result);
+        }
+
+        let promiseReject = (error) => {
+            console.log(error);
+        }
+
+        //The first function inside then refer resolve and second is refers to reject or
+        prom.then(promiseFulfill);
+        porm.catch(promiseReject);
+        *or*
+        prom.then(promiseFulfill).catch(promiseReject);
+        *or*
+        prom.then(promiseFulfill, promiseReject);
+        
+
+        // we also use catch for promiseReject function
+        //ex - prom.catch(promiseReject);
+
+
+**** // Another example Promise
+
+        const sum = (a, b) => {
+            return new Promise((myResolve, myReject) => {
+                let c = a / b;
+                if (c % 2 == 0) {
+                    myResolve(`After calculation given number is even number : ${c}`)
+                }
+                else {
+                    myReject(`Given number is Odd nuber : ${c}`)
+                }
+            })
+        }
+
+
+        // let success = (result) => {
+        //     console.log(result);
+        // }
+
+        // let failed = (failed) => {
+        //     console.log(failed);
+        // }
+
+        // We also write the code short form
+        // 
+        sum(66,3).then((Success) => { console.log(Success) }).catch((failed) => {console.log(failed)});
+        // sum(4, 2).catch(failed);       

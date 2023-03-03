@@ -1,0 +1,38 @@
+JavaScript strings are for storing and manipulating text.
+
+You can use single or double quotes:
+
+Example
+1.let carName1 = "Volvo XC60";  // Double quotes
+2.let carName2 = 'Volvo XC60';  // Single quotes
+3.let answer2 = "He is called 'Johnny'";
+
+
+1.String Length
+To find the length of a string, use the built-in length property:
+
+Example
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+
+The backslash (\) escape character turns special characters into string characters:
+
+Code	Result	Description
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+
+1. \n	 New Line - this is used to create new line.
+
+//breaking line codes - 
+
+A safer way to break up a string, is to use string addition:
+
+Example - 
+	document.getElementById("demo").innerHTML = "Hello " +
+	"Dolly!";
+
+note -You cannot break up a code line with a backslash:
+
+
+

@@ -1,0 +1,96 @@
+5.JavaScript Numbers -
+             1.JavaScript has only one type of number. Numbers can be written with or without decimals.                               
+             2.Extra large or extra small numbers can be written with scientific (exponent) notation:
+                  Example
+                  let x = 123e5;    // 12300000
+                  let y = 123e-5;   // 0.00123 
+             3.The maximum number of decimals is 17.
+             4.Floating point arithmetic is not always 100% accurate:
+                    EX - let x = 0.2 + 0.1;   OUTPUT = 0.30000000000004
+
+                SOLVE THESE ESSUE WRITE CODE -
+                    To solve the problem above, it helps to multiply and divide:
+                    let x = (0.2 * 10 + 0.1 * 10) / 10;
+
+             5.Numbers are added. Strings are concatenated.
+             6.In the example JavaScript uses the + operator to concatenate the strings. 
+                ex - let x = 25;      
+                     let y = "25";
+                     let z = x + y;   output - 2525
+
+             note - this operatore gives a multiplication of number (x) and string (y). 
+                ex - let x = 25;      
+                     let y = "25";
+                     let z = x * y ;   output - 625   
+
+      **  NaN - Not a Number
+
+              
+            1. NaN is a JavaScript reserved word indicating that a number is not a legal number.
+            Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+            Example
+                let x = 100 / "Apple";
+            2. However, if the string contains a numeric value , the result will be a number:
+                Example
+                   let x = 100 / "10"; 
+
+
+6.JavaScript Number Methods -
+
+  6.1 toString() Method -
+        The toString() method returns a number as a string.
+        
+  6.2 The toExponential() Method - 
+            toExponential() returns a string, with a number rounded and written using exponential notation. 
+            ex -let x = 9.656;          output -9.65e+0
+                x.toExponential(2); 
+
+  6.3 The toFixed() Method
+          toFixed() returns a string, with the number written with a specified number of decimals:
+          Example
+            let x = 9.656;   
+            x.toFixed(0);     output-  10    / its take 0 value    
+            x.toFixed(2);     output- 9.66  //after decimal counts first and second number
+
+  6.4 The toPrecision() Method
+        toPrecision() returns a string, with a number written with a specified length:
+        Example
+          let x = 9.656;
+          x.toPrecision();     output- 9.656  // its doesn't take 0 
+          x.toPrecision(2);    output- 9.7  //counts 9 as a first number    
+
+  6.5 Converting Variables to Numbers
+
+      There are 3 JavaScript methods that can be used to convert variables to numbers:
+      1.The Number() method
+      2.The parseInt() method
+      3.The parseFloat() method
+      These methods are not number methods, but global JavaScript methods.  
+
+
+     1.The Number() Method
+      Number() can be used to convert JavaScript variables to numbers:
+
+      Example
+          Number(true);   // output- 1
+          Number(false);  // output- 0
+          Number("10");   // output- 10
+          Number("10,33");// output- NaN
+          Number("10 33");// output- NaN
+          Number("John"); // output- NaN
+
+     ex -
+           The Number() Method Used on Dates
+            Number() can also convert a date to a number.
+
+            Example
+                  Number(new Date("1970-01-01"))
+            The Number() method returns the number of milliseconds since 1.1.1970.     
+
+     2. The parseInt() Method -
+                    parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+
+     3.The parseFloat() Method
+                  parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+
+                  

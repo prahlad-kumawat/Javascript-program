@@ -1,0 +1,70 @@
+JavaScript Classes -
+    ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
+    JavaScript Classes are templates for JavaScript Objects.
+
+JavaScript Class Syntax -
+    Use the keyword class to create a class.
+    Always add a method named constructor():
+   ex-
+    Syntax
+    class ClassName {
+    constructor() { ... }
+    }
+
+constructor Method - The Constructor Method
+The constructor method is a special method:
+
+1.It has to have the exact name "constructor"
+2.It is executed automatically when a new object is created
+3.It is used to initialize object properties.
+4.If you do not define a constructor method, JavaScript will add an empty constructor method.    
+
+Example -
+    class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+    }
+    The example above creates a class named "Car".
+    The class has two initial properties: "name" and "year".  
+
+   ** Note - A JavaScript class is not an object.
+           It is a template for JavaScript objects.
+
+>Using a Class -
+        When you have a class, you can use the class to create objects:
+
+    Example
+        let myCar1 = new Car("Ford", 2014);
+        let myCar2 = new Car("Audi", 2019);
+
+    The example above uses the Car class to create two Car objects.
+    Note - The constructor method is called automatically when a new object is created.       
+
+        
+
+>Class Methods -
+    Class methods are created with the same syntax as object methods.
+    Use the keyword class to create a class.
+    Always add a constructor() method.
+    Then add any number of methods.    
+
+ex- 1.when we use another method we also use the constructor values in this method
+    2. we can also pass the parameter in our method.
+    3. Here this.name is a object variable and name is value.
+    class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age(x) {
+                let constructor_year = this.year;
+                let parameter = x ;
+            }
+        }
+
+        age(name);
+
+
+     

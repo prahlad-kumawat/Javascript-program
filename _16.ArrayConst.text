@@ -1,0 +1,30 @@
+Array Const
+        ECMAScript 2015 (ES6)
+            In 2015, JavaScript introduced an important new keyword: const.
+
+            It has become a common practice to declare arrays using const:
+
+            Example
+            const cars = ["Saab", "Volvo", "BMW"];
+
+    > Arrays are Not Constants
+        The keyword const is a little misleading.
+        It does NOT define a constant array. It defines a constant reference to an array.
+        Because of this, we can still change the elements of a constant array.        
+
+     Ex - Elements Can be Reassigned
+            You can change the elements of a constant array:
+            Example
+            // You can create a constant array:
+            const cars = ["Saab", "Volvo", "BMW"];
+            // You can change an element:
+            cars[0] = "Toyota";
+            // You can add an element:
+            cars.push("Audi");    
+
+    >Meaning: An array declared with const must be initialized when it is declared.
+
+    Example
+        This will not work:
+        const cars;
+        cars = ["Saab", "Volvo", "BMW"];        

@@ -1,0 +1,31 @@
+JavaScript Type Conversion
+    >JavaScript variables can be converted to a new variable and another data type:
+    >By the use of a JavaScript function
+    >Automatically by JavaScript itself
+
+    1.Converting Strings to Numbers - 
+
+    Examples
+    These will convert:
+            Number("3.14")   //3.14
+            Number(Math.PI)  //3.14
+            Number(" ")      // 0    
+            Number("")       // 0
+    These will not convert:
+            Number("99 88")  // NaN
+            Number("John")   // NaN
+
+    2.Converting Booleans to Numbers - 
+        The global method Number() can also convert booleans to numbers.
+
+        1.Number(false)     // returns 0
+        2.Number(true)      // returns 1  
+
+    3.Converting Booleans to Strings
+        The global method toString() can convert booleans to strings.   
+        1.false.toString()   // returns "false"
+        2.true.toString()    // returns "true"       
+
+
+** JavaScript Type Conversion Table     
+

@@ -1,0 +1,68 @@
+1.Switch
+ 
+  let num = 8;
+        switch (num) {
+            case 7:
+                console.log("7");
+                break;
+            case 8:
+                console.log("8");
+                break;
+            case 9:
+                console.log("9");
+                break;
+            default:
+                console.log("out");
+                break;
+        }
+
+
+
+2.The break Keyword
+        When JavaScript reaches a break keyword, it breaks out of the switch block.
+
+*** Note: If you omit the break statement, the next case will be executed even if the evaluation does not match the case.
+
+
+2.Common Code Blocks -
+    Sometimes you will want different switch cases to use the same code.
+    In this example case 4 and 5 share the same code block, and 0 and 6 share another code block:
+
+            let num = 8;
+            switch (num) {
+                case 7:
+                case 8:
+                    console.log("7 , 8");
+                break;
+                
+                case 9:
+                    console.log("9");
+                break;
+                    
+                default:
+                    console.log("out");
+
+                    break;
+            }
+
+
+
+ 3.  Strict Comparison ***
+        Switch cases use strict comparison (===).
+        The values must be of the same type to match.
+        A strict comparison can only be true if the operands are of the same type.
+        In this example there will be no match for x:
+
+            Example
+                let x = "0";
+                switch (x) {
+                case 0:
+                    text = "Off";
+                    break;
+                case 1:
+                    text = "On";
+                    break;
+                default:
+                    text = "No value found";
+                }
+                

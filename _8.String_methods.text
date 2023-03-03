@@ -1,0 +1,116 @@
+// some top of the part of this topic is missing *********************************
+
+
+**Converting to Upper and Lower Case
+
+A string is converted to upper case with toUpperCase():
+A string is converted to lower case with toLowerCase():
+
+
+**JavaScript String concat()
+
+  concat() joins two or more strings.
+
+The concat() method can be used instead of the plus operator. These two lines do the same:
+  Example
+  text = "Hello" + " " + "World!";
+  text = "Hello".concat(" ", "World!");
+
+
+Note = 
+      All string methods return a new string. They don't modify the original string.
+      Formally said:
+      Strings are immutable: Strings cannot be changed, only replaced.
+
+
+** JavaScript String trim()
+
+    The trim() method removes whitespace from start and end of a string but dont remove space bw characters:
+    Example - 
+    let text1 = "      Hello   World!      ";
+    let text2 = text1.trim();
+
+** trimStart()  - its remove spaces only starting of strings.
+** trimEnd()  - its remove spaces only end of strings.
+
+**JavaScript String padStart() - 
+
+    The padStart() method pads a string with another string:
+    Example
+    let text = "61728";
+    let padded = text.padStart(7,"x");   
+
+    output - **61728; 
+
+** padEnd() - 
+          Ex - let text = "61728";
+        let padded = text.padEnd(7,"x");   
+        output - 61728**; 
+
+        ex - let text = "61728";
+            let padded = text.padEnd(7,"rahul");   
+            output - 61728rahul; 
+
+Note = The padStart() method is a string method.
+        To pad a number, convert the number to a string first.
+        See the example below.
+
+
+3.   Extracting String Characters
+
+      There are 3 methods for extracting string characters:
+      1.charAt(position)
+      2.charCodeAt(position)
+      3.Property access [ ]   
+
+**charAt()
+      The charAt() method returns the character at a specified index (position) in a string:
+      Example
+      let text = "HELLO WORLD";
+      let char = text.charAt(6);           
+
+**charCodeAt()
+          The charCodeAt() method returns the unicode of the character at a specified index in a string:
+          The method returns a UTF-16 code (an integer between 0 and 65535).
+          Example
+          let text = "HELLO WORLD";
+          let char = text.charCodeAt(0);  // output - 72
+
+
+
+ note - 
+        Property Access
+        ECMAScript 5 (2009) allows property access [ ] on strings:
+
+        Example - 
+          let text = "HELLO WORLD";
+          let char = text[0];
+        Note-
+            Property access might be a little unpredictable:
+            It makes strings look like arrays (but they are not)
+            If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+            It is read only. str[0] = "A" gives no error (but does not work!) 
+
+
+ **** WHEN we want to change string into array we use split() -
+
+    Converting a String to an Array - 
+        If you want to work with a string as an array, you can convert it to an array.
+        JavaScript String split()
+        A string can be converted to an array with the split() method:
+
+    Example - 
+        text.split(",")    // Split on commas
+        text.split(" ")    // Split on spaces
+        text.split("|")    // Split on pipe
+        If the separator is omitted, the returned array will contain the whole string in index [0].
+        If the separator is "", the returned array will be an array of single characters:
+
+    Example - 
+         
+          let array = name.split("*")
+          console.log(array);
+          
+          output - (2)['r', 'ahul']
+              0:"r"
+              1:"ahul"

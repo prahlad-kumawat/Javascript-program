@@ -1,0 +1,52 @@
+1.A callback is a function passed as an argument to another function
+2.This technique allows a function to call another function
+3.A callback function can run after another function has finished
+
+
+Synchronus - when code is executed line by line this called Synchronus execution.
+Asynchronus - when code is executed Random line this called Asynchronus execution.
+
+why we use callback - 
+    try to calculate and print the sum of the two number are not possible because showAlert() is executed first and then executed calculate so this is a big problam and resolve this problam we use *Callback* functions.  
+          ex - 
+
+          const calculator = (x , y) => {
+                setTimeout(()=>{
+                  let z = x + y ; 
+                  return z;   
+                } , 3000);
+            } 
+
+            const showAlert = (sum) =>{
+                  console.log(`The sum of the two number is : ${sum}`);
+            }
+
+            let sum = calculator(5 , 5);
+            showAlert(sum);
+
+
+ Callback functions - When we pass function as a argument to another function this is a callback function. here Msg is callback function.
+             ex - 
+    
+        const calculator = (x, y, Rahul) => {  // Msg == Rahul 
+            let z;
+            setTimeout(() => {
+                z = x + y
+                Rahul(z);        // this is the second function
+            }, 3000)
+        }
+
+        const Msg = (sum) => {
+            console.log(`The sum of the two
+             number is : ${sum}`)
+        }
+
+
+        calculator(5, 5, Msg);  // we also pass the function here
+
+
+  Note - Dont use peranthesis when passing a function. 
+
+
+            
+

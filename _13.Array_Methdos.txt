@@ -1,0 +1,111 @@
+JavaScript Array Methods
+    1.toString()
+    The JavaScript method toString() converts an array to a string of (comma separated) array values.
+
+    Example
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    Result:
+        Banana,Orange,Apple,Mango
+
+    2.join()-
+        The join() method also joins all array elements into a string.
+        It behaves just like toString(), but in addition you can specify the separator:   
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                  Result: Banana * Orange * Apple * Mango     
+
+    3.Popping and Pushing
+        When you work with arrays, it is easy to remove elements and add new elements.
+        This is what popping and pushing is:
+        Popping items out of an array, or pushing items into an array.
+
+              1.pop()
+                    The pop() method removes the last element from an array:
+
+                    Example
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                   let value = fruits.pop();  // value variable holdes last value 
+
+               2.push()
+                    The push() method adds a new element to an array (at the end):
+
+                    Example
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    fruits.push("Kiwi");     
+
+                Note - Shifting Elements
+                            Shifting is equivalent to popping, but working on the first element instead of the last.    
+    4. shift()
+            The shift() method removes the first array element and "shifts" all other elements to a lower index.
+            Example
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.shift();
+        Note - The shift() method returns the value that was "shifted out":                        
+
+    5.unshift()
+            The unshift() method adds a new element to an array (at the beginning).
+
+    6.Array length - We can use Array length properties to add a string in any number of index
+
+     const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits[fruits.length  - 2] = "Kiwi";
+        console.log(fruits);   
+
+        
+    7.Merging (Concatenating) Arrays
+        The concat() method creates a new array by merging (concatenating) existing arrays:
+
+        Example (Merging Two Arrays)
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+
+        const myChildren = myGirls.concat(myBoys); 
+        NOte - 1. The concat() method does not change the existing arrays. 
+                It always returns a new array. 
+                2.we put multi array argument - const myChildren = arr1.concat(arr2, arr3);
+                3.The concat() method can also take strings as arguments:
+             
+    8.splice()
+            The splice() method can be used to add new items to an array:
+            Example
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                fruits.splice(2, 0, "Lemon", "Kiwi");
+            note -    
+               1. The first parameter (2) defines the position where new elements should be added (spliced in).
+               2. The second parameter (0) defines how many elements should be removed.
+                The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+               3.With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+                    Example
+                        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.splice(0, 1);
+                        The first parameter (0) defines the position where new elements should be added (spliced in).
+                        The second parameter (1) defines how many elements should be removed. 
+
+    9.slice()
+        The slice() method slices out a piece of an array into a new array.
+        This example slices out a part of an array starting from array element 1 ("Orange"):
+
+        Example
+            const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            const citrus = fruits.slice(1);
+        Note
+           1.The slice() method creates a new array.
+           2.The slice() method does not remove any elements from the source array.
+           3. slice() method takes  2 arguments first is starting and second is end but second parameter is not included.
+           4. when we enter one value rest of part will we slice out.             
+           5.Automatic toString()
+                1.JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+                2.This is always the case when you try to output an array.     
+                
+
+
+
+
+
+
+    Note - 1.All JavaScript objects have a toString() method.            
+           2.There are no built-in functions for finding the highest or lowest value in a JavaScript array
+           3.Warning !
+                Array elements can be deleted using the JavaScript operator delete.
+                Using delete leaves undefined holes in the array.
+                Use pop() or shift() instead.

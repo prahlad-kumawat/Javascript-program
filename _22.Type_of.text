@@ -1,0 +1,66 @@
+typeof-
+     The typeofoperator is not a variable. It is an operator.
+
+    In JavaScript there are 5 different data types that can contain values:
+
+    1.string
+    2.number
+    3.boolean
+    4.object
+    5.function
+There are 6 types of objects:
+
+    1.Object
+    2.Date
+    3.Array
+    4.String
+    5.Number
+    6.Boolean
+And 2 data types that cannot contain values:
+
+    1.null
+    2.undefined
+
+Note:
+
+    1.The data type of NaN is number
+    2.The data type of an array is object
+    3.The data type of a date is object
+    4.The data type of null is object
+    5.The data type of an undefined variable is undefined *
+    6.The data type of a variable that has not been assigned a value is also undefined *
+
+
+Complex Data -
+    The typeof operator can return one of two complex types:
+    1.function
+    2.object
+
+    The typeof operator returns "object" for objects, arrays, and null.
+    The typeof operator does not return "object" for functions.
+
+    Example
+        typeof {name:'John', age:34} // Returns "object"
+        typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+        typeof null                  // Returns "object"
+        typeof function myFunc(){}   // Returns "function"    
+
+>  Null
+    In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+    Unfortunately, in JavaScript, the data type of null is an object.
+    You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+
+    You can empty an object by setting it to null:
+
+    Example
+
+    let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    person = null;    // Now value is null, but type is still an object 
+    person = undefined;   // Now both value and type is undefined  
+
+>
+    typeof undefined           // undefined
+    typeof null                // object     
+
+
+

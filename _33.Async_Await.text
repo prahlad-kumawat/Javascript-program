@@ -1,0 +1,65 @@
+"async and await make promises easier to write"
+    async makes a function return a Promise
+    await makes a function wait for a Promise
+
+Async Syntax
+    The keyword async before a function makes the function to return a promise:
+
+    Example
+        async function myFunction() {
+        return "Hello";
+        }
+
+    Is the same as:
+    
+        function myFunction() {
+        return Promise.resolve("Hello");
+        }    
+
+// Async
+
+        // Inplace of promise we use Async function. Async Function returns a promise and we can access this promise using then and catch same as Promise.
+
+        //1. Noramal function async 
+        // async function sum(a, b) {
+        //     return a + b;
+        // }
+
+        // sum().then((result) => { console.log(result) }).catch((error) => { console.log(error) });
+
+        //2. Arrow function async 
+
+        // const sum = async (a, b) => {
+        //     return a + b;
+        // }
+
+        // Await Syntax
+        //     The await keyword can only be used inside an async function.
+        //     The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
+
+        // ex  - 
+        async function test() {
+            console.log("2 : message");
+           await console.log("3 : message");
+            console.log("4 : message");
+            console.log("5 : message");
+
+        }
+
+        console.log("1 : message");
+        test();
+        console.log("6 : message");
+        console.log("7 : message");
+
+
+         output -  1, 2, 3, 6, 7, 4, 5
+        // without await = output - 1, 2, 3, 4, 5, 6, 7 
+
+        // when we use await message 1 and 2 is executed but 3 , 4 , 5 is in waiting.
+        // so javaScript skip three lines 3 , 4 , 5 and executes the *all code below the function* and after the execution returns back await and resolve those line*
+        
+        // Note -  1. its too simple example so 3 is executed.
+                //    2. await is used to fetch a data in database
+
+
+   

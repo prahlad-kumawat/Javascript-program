@@ -1,0 +1,71 @@
+Data Types
+
+JavaScript has 8 Datatypes
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+5. Null
+7. Symbol
+8. Object
+
+The Object Datatype
+The object data type can contain:
+
+1. An object
+2. An array
+3. A date
+
+    JavaScript variables can hold different data types: numbers, strings, objects and more:
+    let length = 16;                               // Number
+    let lastName = "Johnson";                      // String
+    let x = {firstName:"John", lastName:"Doe"};    // Object
+
+
+    >JavaScript Strings
+        A string (or a text string) is a series of characters like "John Doe".
+
+        Strings are written with quotes. You can use single or double quotes:
+        Example
+        let carName1 = "Volvo XC60";   // Using double quotes
+        let carName2 = 'Volvo XC60';   // Using single quotes    
+
+    >You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+        Example
+            let answer1 = "It's alright";             // Single quote inside double quotes
+            let answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes    
+
+
+    >Booleans
+        Booleans can only have two values: true or false.
+        Example
+            let x = 5;
+            let y = 5;
+            let z = 6;
+            (x == y)       // Returns true
+            (x == z)       // Returns false
+            Booleans are often used in conditional testing. 
+
+
+    >JavaScript Arrays
+            JavaScript arrays are written with square brackets.
+            Array items are separated by commas.
+            The following code declares (creates) an array called cars, containing three items (car names):
+            Example
+                const cars = ["Saab", "Volvo", "BMW"];
+                Array indexes are zero-based, which means the first item is [0], second is [1], and so on.       
+
+    >JavaScript Objects
+        JavaScript objects are written with curly braces {}.
+        Object properties are written as name:value pairs, separated by commas.
+        Example
+            const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+            The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor.
+
+    >Empty Values
+        An empty value has nothing to do with undefined.
+        An empty string has both a legal value and a type.
+        Example
+             let car = "";    // The value is "",
+                                 the typeof is "string"                            

@@ -1,0 +1,59 @@
+>JavaScript Functions - 
+        A JavaScript function is a block of code designed to perform a particular task. 
+
+        A JavaScript function is executed when "something" invokes it (calls it).
+
+        Example
+            // Function to compute the product of p1 and p2
+            function myFunction(p1, p2) {
+            return p1 * p2;
+            }
+
+>JavaScript Function Syntax - 
+       1. A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+       2. Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+       3. The parentheses may include parameter names separated by commas:
+        (parameter1, parameter2, ...)
+
+       4. The code to be executed, by the function, is placed inside curly brackets: {}
+
+       5. Function arguments are the values received by the function when it is invoked.
+
+       6. Inside the function, the arguments (the parameters) behave as local variables.
+
+
+ > Function Return - 
+        When JavaScript reaches a return statement, the function will stop executing.
+
+        If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+
+        Functions often compute a return value. The return value is "returned" back to the "caller":
+
+        Example
+            Calculate the product of two numbers, and return the result:
+
+            let x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+            function myFunction(a, b) {
+            return a * b;             // Function returns the product of a and b
+            }
+            The result in x will be: 12
+                                       
+
+ >  The () Operator Invokes the Function - 
+            Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+
+            Accessing a function without () will return the function object instead of the function result.
+
+            Example
+                function toCelsius(fahrenheit) {
+                return (5/9) * (fahrenheit-32);
+                }
+                document.getElementById("demo").innerHTML = toCelsius;     
+
+
+
+                                            
+
